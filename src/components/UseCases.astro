@@ -1,0 +1,111 @@
+---
+const useCases = [
+  {
+    icon: 'message',
+    title: 'Atendimento Automatizado',
+    description: 'Chatbots e assistentes virtuais que resolvem dúvidas 24/7.',
+  },
+  {
+    icon: 'chart',
+    title: 'Automação Comercial',
+    description: 'Qualificação de leads e acompanhamento automático do funil de vendas.',
+  },
+  {
+    icon: 'git',
+    title: 'Gestão de Processos',
+    description: 'Workflows que conectam departamentos e eliminam gargalos.',
+  },
+  {
+    icon: 'users',
+    title: 'CRM Inteligente',
+    description: 'Gestão de relacionamento com IA que prevê necessidades dos clientes.',
+  },
+  {
+    icon: 'database',
+    title: 'Integração ERP',
+    description: 'Sincronização completa entre sistemas de gestão e operações.',
+  },
+  {
+    icon: 'workflow',
+    title: 'Fluxos Inteligentes',
+    description: 'Automações que aprendem e se adaptam ao comportamento do negócio.',
+  },
+  {
+    icon: 'dashboard',
+    title: 'Dashboards Gerenciais',
+    description: 'Visualizações de dados para decisões rápidas e assertivas.',
+  },
+  {
+    icon: 'bot',
+    title: 'IA para Atendimento',
+    description: 'Assistentes inteligentes que melhoram a experiência do cliente.',
+  },
+  {
+    icon: 'cart',
+    title: 'IA para Vendas',
+    description: 'Previsão de demanda e otimização da força de vendas.',
+  },
+  {
+    icon: 'headphones',
+    title: 'IA para Suporte',
+    description: 'Automação do suporte técnico com resolução inteligente de problemas.',
+  },
+];
+
+const icons: Record<string, string> = {
+  message: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
+  chart: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  git: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
+  users: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z',
+  database: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
+  workflow: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
+  dashboard: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  bot: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+  cart: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z',
+  headphones: 'M3 18v-6a9 9 0 0118 0v6',
+};
+---
+
+<section id="casos-de-uso" class="py-24 relative">
+  <!-- Background accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
+        Casos de Uso
+      </span>
+      <h2 class="section-title mb-6">
+        Aplicações reais que{' '}
+        <span class="gradient-text">geram resultado</span>
+      </h2>
+      <p class="section-subtitle">
+        Veja como nossas soluções são aplicadas em diferentes cenários 
+        para resolver problemas reais de empresas.
+      </p>
+    </div>
+
+    <!-- Use Cases Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+      {useCases.map((useCase) => (
+        <div class="glass-card p-5 rounded-2xl hover:bg-glass-medium transition-all duration-300 group">
+          <div class="w-10 h-10 rounded-xl bg-brand-accent/20 flex items-center justify-center mb-3 
+                      group-hover:bg-brand-accent/30 transition-colors duration-300">
+            <svg class="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icons[useCase.icon]} />
+            </svg>
+          </div>
+          
+          <h3 class="font-heading font-semibold text-brand-foreground mb-2 text-sm">
+            {useCase.title}
+          </h3>
+          
+          <p class="text-xs text-brand-muted leading-relaxed">
+            {useCase.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

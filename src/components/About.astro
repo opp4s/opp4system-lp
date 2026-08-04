@@ -1,0 +1,91 @@
+---
+const values = [
+  {
+    icon: 'target',
+    title: 'Foco em Resultados',
+    description: 'Cada solução é projetada para gerar impacto mensurável no seu negócio.',
+  },
+  {
+    icon: 'users',
+    title: 'Atendimento Consultivo',
+    description: 'Entendemos seus desafios antes de propor qualquer solução tecnológica.',
+  },
+  {
+    icon: 'lightbulb',
+    title: 'Inovação Contínua',
+    description: 'Utilizamos as tecnologias mais modernas do mercado em nossos projetos.',
+  },
+  {
+    icon: 'award',
+    title: 'Excelência Técnica',
+    description: 'Equipe especializada com domínio em automação, IA e integrações.',
+  },
+];
+
+const icons: Record<string, string> = {
+  target: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+  users: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z',
+  lightbulb: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+  award: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z',
+};
+---
+
+<section id="sobre" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Content -->
+      <div>
+        <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
+          Quem Somos
+        </span>
+        <h2 class="section-title mb-6">
+          Tecnologia que{' '}
+          <span class="gradient-text">transforma operações</span>
+        </h2>
+        <p class="text-brand-muted text-lg leading-relaxed mb-6">
+          A Opp4System não vende apenas software. Desenvolvemos soluções tecnológicas 
+          sob medida para resolver problemas reais das empresas.
+        </p>
+        <p class="text-brand-muted leading-relaxed mb-6">
+          Nosso diferencial está em unir <strong class="text-brand-foreground">tecnologia</strong>, 
+          <strong class="text-brand-foreground"> automação</strong>, 
+          <strong class="text-brand-foreground"> inteligência artificial</strong> e 
+          <strong class="text-brand-foreground"> integração de sistemas</strong> para entregar 
+          ganhos concretos de eficiência operacional.
+        </p>
+
+        <div class="flex items-center gap-4 p-4 glass-card rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <p class="text-sm text-brand-muted">
+            <strong class="text-brand-foreground">Nossa missão:</strong> Capacitar empresas através de 
+            tecnologia inteligente que gera eficiência, produtividade e crescimento sustentável.
+          </p>
+        </div>
+      </div>
+
+      <!-- Values Grid -->
+      <div class="grid grid-cols-2 gap-4">
+        {values.map((value) => (
+          <div class="glass-card p-6 rounded-2xl hover:bg-glass-medium transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center mb-4 
+                        group-hover:bg-brand-accent/30 transition-colors duration-300">
+              <svg class="w-6 h-6 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icons[value.icon]} />
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-brand-foreground mb-2">
+              {value.title}
+            </h3>
+            <p class="text-sm text-brand-muted leading-relaxed">
+              {value.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

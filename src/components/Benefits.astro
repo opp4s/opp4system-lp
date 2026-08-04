@@ -1,0 +1,120 @@
+---
+const benefits = [
+  {
+    icon: 'dollar',
+    title: 'Redução de Custos',
+    description: 'Automatize processos e elimine custos operacionais desnecessários.',
+    metric: '-40%',
+    metricLabel: 'custos operacionais',
+  },
+  {
+    icon: 'clock',
+    title: 'Economia de Tempo',
+    description: 'Libere sua equipe de tarefas repetitivas para focar em atividades estratégicas.',
+    metric: '10h',
+    metricLabel: 'economizadas/semana',
+  },
+  {
+    icon: 'minus',
+    title: 'Eliminação de Retrabalho',
+    description: 'Processos automatizados reduzem erros humanos e garantem consistência.',
+    metric: '99%',
+    metricLabel: 'precisão',
+  },
+  {
+    icon: 'trending',
+    title: 'Aumento de Produtividade',
+    description: 'Sistemas inteligentes que aceleram operações e multiplicam resultados.',
+    metric: '3x',
+    metricLabel: 'mais produtivo',
+  },
+  {
+    icon: 'link',
+    title: 'Integração Completa',
+    description: 'Conecte todos os seus sistemas para uma operação unificada e eficiente.',
+    metric: '100%',
+    metricLabel: 'integrado',
+  },
+  {
+    icon: 'chart',
+    title: 'Decisões Baseadas em Dados',
+    description: 'Dashboards e relatórios que transformam dados em insights acionáveis.',
+    metric: 'Real-time',
+    metricLabel: 'visibilidade',
+  },
+  {
+    icon: 'headphones',
+    title: 'Melhor Atendimento',
+    description: 'Chatbots e automação que melhoram a experiência do cliente 24/7.',
+    metric: '24/7',
+    metricLabel: 'disponibilidade',
+  },
+  {
+    icon: 'maximize',
+    title: 'Escalabilidade',
+    description: 'Soluções que crescem junto com o seu negócio sem limitações técnicas.',
+    metric: '∞',
+    metricLabel: 'escala',
+  },
+];
+
+const icons: Record<string, string> = {
+  dollar: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  clock: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+  minus: 'M20 12H4',
+  trending: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+  link: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
+  chart: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  headphones: 'M3 18v-6a9 9 0 0118 0v6',
+  maximize: 'M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3',
+};
+---
+
+<section id="beneficios" class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
+        Benefícios
+      </span>
+      <h2 class="section-title mb-6">
+        Resultados que{' '}
+        <span class="gradient-text">transformam seu negócio</span>
+      </h2>
+      <p class="section-subtitle">
+        Cada solução que desenvolvemos é focada em gerar impacto mensurável 
+        na eficiência, produtividade e rentabilidade da sua empresa.
+      </p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {benefits.map((benefit) => (
+        <div class="glass-card p-6 rounded-2xl hover:bg-glass-medium transition-all duration-300 group">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center 
+                        group-hover:bg-brand-accent/30 transition-colors duration-300">
+              <svg class="w-6 h-6 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icons[benefit.icon]} />
+              </svg>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-heading font-bold text-brand-accent">
+                {benefit.metric}
+              </div>
+              <div class="text-xs text-brand-muted">{benefit.metricLabel}</div>
+            </div>
+          </div>
+          
+          <h3 class="font-heading font-semibold text-brand-foreground mb-2">
+            {benefit.title}
+          </h3>
+          
+          <p class="text-sm text-brand-muted leading-relaxed">
+            {benefit.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

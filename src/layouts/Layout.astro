@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Soluções sob medida em Inteligência Artificial, Automação de Processos e Integração de Sistemas para empresas que buscam eficiência e crescimento.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Inteligência Artificial, Automação Empresarial, Desenvolvimento de Sistemas, Integração de Sistemas, Automação de Processos, Chatbots, CRM, APIs, Tecnologia para Empresas, Transformação Digital, Opp4System" />
+    <meta name="author" content="Opp4System" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://opp4system.com.br" />
+    <meta property="og:site_name" content="Opp4System" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://opp4system.com.br" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Opp4System',
+      description: 'Soluções sob medida em Inteligência Artificial, Automação de Processos e Integração de Sistemas.',
+      url: 'https://opp4system.com.br',
+      logo: 'https://opp4system.com.br/logo.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+55-XX-XXXX-XXXX',
+        contactType: 'sales',
+        availableLanguage: ['Portuguese'],
+      },
+      sameAs: [],
+    })} />
+    
+    <title>{title}</title>
+  </head>
+  <body class="font-body antialiased bg-brand-deep text-brand-foreground">
+    <!-- Background ambient effects -->
+    <div class="bg-ambient fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="absolute w-[600px] h-[600px] bg-brand-accent/15 rounded-full filter blur-[120px] -top-48 -right-48 animate-float"></div>
+      <div class="absolute w-[500px] h-[500px] bg-purple-500/10 rounded-full filter blur-[100px] -bottom-36 -left-36 animate-float" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </body>
+</html>

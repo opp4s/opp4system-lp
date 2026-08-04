@@ -1,0 +1,126 @@
+---
+const solutions = [
+  {
+    icon: 'brain',
+    title: 'Inteligência Artificial',
+    description: 'Implementação de IA para automatizar decisões, analisar dados e otimizar processos complexos.',
+    features: ['Análise preditiva', 'Processamento de linguagem natural', 'Machine Learning'],
+  },
+  {
+    icon: 'workflow',
+    title: 'Automação de Processos',
+    description: 'Eliminação de tarefas repetitivas e criação de fluxos inteligentes que economizam tempo e recursos.',
+    features: ['RPA avançado', 'Workflows personalizados', 'Integrações automáticas'],
+  },
+  {
+    icon: 'code',
+    title: 'Desenvolvimento de Sistemas',
+    description: 'Criação de sistemas sob medida que resolvem desafios específicos do seu negócio.',
+    features: ['Sistemas web', 'Aplicativos mobile', 'APIs personalizadas'],
+  },
+  {
+    icon: 'link',
+    title: 'Integrações entre Plataformas',
+    description: 'Conexão fluida entre seus sistemas existentes para unificar dados e processos.',
+    features: ['APIs REST/GraphQL', 'Webhooks', 'Middlewares'],
+  },
+  {
+    icon: 'message',
+    title: 'Chatbots Inteligentes',
+    description: 'Atendimento automatizado 24/7 que resolve problemas e qualifica leads automaticamente.',
+    features: ['NLP avançado', 'Multi-canal', 'Aprendizado contínuo'],
+  },
+  {
+    icon: 'dashboard',
+    title: 'Dashboards Gerenciais',
+    description: 'Visualizações de dados em tempo real para tomada de decisão assertiva.',
+    features: ['Métricas em tempo real', 'Relatórios automáticos', 'KPIs personalizados'],
+  },
+  {
+    icon: 'chart',
+    title: 'CRM Inteligente',
+    description: 'Gestão de relacionamento com IA que prevê necessidades e otimiza oportunidades.',
+    features: ['Lead scoring', 'Pipeline inteligente', 'Automação comercial'],
+  },
+  {
+    icon: 'database',
+    title: 'Integração com ERPs',
+    description: 'Conexão completa com seus sistemas de gestão para dados unificados e processos otimizados.',
+    features: ['SAP, TOTVS, Bling', 'Sincronização real-time', 'Migração de dados'],
+  },
+];
+
+const icons: Record<string, string> = {
+  brain: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+  workflow: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
+  code: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+  link: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
+  message: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
+  dashboard: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  chart: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+  database: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
+};
+---
+
+<section id="solucoes" class="py-24 relative">
+  <!-- Background accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-accent/5 to-transparent pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="text-brand-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
+        Nossas Soluções
+      </span>
+      <h2 class="section-title mb-6">
+        Tecnologia completa para{' '}
+        <span class="gradient-text">transformar seu negócio</span>
+      </h2>
+      <p class="section-subtitle">
+        Oferecemos um ecossistema completo de soluções tecnológicas que se integram 
+        para gerar eficiência e resultado em toda a sua operação.
+      </p>
+    </div>
+
+    <!-- Solutions Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {solutions.map((solution) => (
+        <div class="glass-card p-6 rounded-2xl hover:bg-glass-medium transition-all duration-300 cursor-pointer group">
+          <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center mb-4 
+                      group-hover:bg-brand-accent/30 transition-colors duration-300">
+            <svg class="w-6 h-6 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icons[solution.icon]} />
+            </svg>
+          </div>
+          
+          <h3 class="font-heading font-semibold text-brand-foreground mb-2 text-lg">
+            {solution.title}
+          </h3>
+          
+          <p class="text-sm text-brand-muted mb-4 leading-relaxed">
+            {solution.description}
+          </p>
+
+          <ul class="space-y-2">
+            {solution.features.map((feature) => (
+              <li class="flex items-center gap-2 text-xs text-brand-muted">
+                <div class="w-1.5 h-1.5 rounded-full bg-brand-accent/50"></div>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12">
+      <a href="#contato" class="btn-primary inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Discuta seu projeto conosco
+      </a>
+    </div>
+  </div>
+</section>
