@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
@@ -27,27 +23,10 @@ module.exports = {
         heading: ['Poppins', 'sans-serif'],
         body: ['Open Sans', 'sans-serif'],
       },
-      backdropBlur: {
-        glass: '20px',
-      },
       boxShadow: {
         glass: '0 8px 32px rgba(0, 0, 0, 0.3)',
         'glass-lg': '0 16px 64px rgba(0, 0, 0, 0.4)',
         glow: '0 0 40px rgba(94, 106, 210, 0.3)',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow-pulse': {
-          '0%, 100%': { opacity: '0.4' },
-          '50%': { opacity: '0.8' },
-        },
       },
     },
   },
