@@ -295,6 +295,52 @@ npx wrangler pages deploy ./dist --project-name=opp4system-lp
 
 ---
 
+## Próximos Passos
+
+### 1. Ajustar Links de Conexão para Lead
+- [ ] Configurar formulário para enviar dados (endpoint ou serviço)
+- [ ] Adicionar link direto do WhatsApp com mensagem pré-definida
+- [ ] Configurar redirecionamento após envio do formulário
+- [ ] Testar todos os CTAs (Solicitar Demonstração, Falar com Especialista)
+- [ ] Adicionar tracking de conversão (Google Analytics, Pixel)
+
+### 2. Modo Claro (Light Mode)
+- [ ] Inverter paleta de cores para fundo claro
+- [ ] Ajustar contraste de texto para fundo branco
+- [ ] Manter accent color (#5E6AD2) para botões e links
+- [ ] Atualizar glassmorphism para modo claro (mais sutil)
+- [ ] Testar acessibilidade (contraste 4.5:1 mínimo)
+- [ ] Adicionar toggle dark/light mode (futuro)
+
+### 3. Tornar a Página Mais Atrativa
+- [ ] Adicionar imagens reais (ilustrações ou fotos)
+- [ ] Criar animações de scroll mais elaboradas
+- [ ] Adicionar depoimentos de clientes
+- [ ] Incluir seção de cases de sucesso com resultados
+- [ ] Adicionar contador de animação nas estatísticas
+- [ ] Melhorar micro-interações nos botões e cards
+- [ ] Adicionar gradientes mais vibrantes
+- [ ] Incluir vídeo de apresentação (futuro)
+
+### 4. Funcionalidades Adicionais
+- [ ] Integrar com CRM (envio automático de leads)
+- [ ] Adicionar chat widget (WhatsApp ou chat interno)
+- [ ] Criar versão em Português e Inglês
+- [ ] Adicionar blog para SEO
+- [ ] Configurar analytics completo
+
+---
+
+## Changelog
+
+| Data | Alteração |
+|------|-----------|
+| 04/08/2026 | Deploy inicial no Cloudflare Pages |
+| 04/08/2026 | Correção do Tailwind CSS (PostCSS) |
+| 04/08/2026 | Documentação completa do projeto |
+
+---
+
 ## Licença
 
 Propriedade da Opp4System. Todos os direitos reservados.
