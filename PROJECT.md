@@ -6,6 +6,27 @@ Landing page moderna e profissional para a **Opp4System**, empresa especializada
 
 ---
 
+## Skills Disponíveis para o Projeto
+
+| Skill | Uso | Localização |
+|-------|-----|-------------|
+| **ui-ux-pro-max** | Design system, cores, tipografia, componentes | `~/.claude/skills/ui-ux-pro-max/` |
+| **marketing-campaign** | Campanhas de marketing, copy, landing page | `~/.claude/skills/marketing-campaign/` |
+| **google-ads-campaign** | Campanhas Google Ads, anúncios, tracking | `~/.claude/skills/google-ads-campaign/` |
+| **cloudflare** | Deploy e configuração Cloudflare Pages | `~/.claude/skills/cloudflare/` |
+| **seo** | Otimização para mecanismos de busca | `~/.claude/skills/seo/` |
+
+### Como Usar as Skills
+
+Quando o assunto for **Google Ads**, a skill `google-ads-campaign` será carregada automaticamente com:
+- Estrutura de campanhas
+- Palavras-chave
+- Copy de anúncios
+- Tracking de conversões
+- Estratégia de lances
+
+---
+
 ## Stack Tecnológica
 
 | Tecnologia | Versão | Função |
@@ -274,6 +295,15 @@ npx wrangler pages deploy ./dist --project-name=opp4system-lp
 
 ---
 
+## Referências UX / Landing Page
+
+| Recurso | Link | Descrição |
+|---------|------|-----------|
+| **Impeccable** | https://github.com/pbakaus/impeccable | Design language para AI agents — 23 comandos (`audit`, `critique`, `polish`, `distill`, etc.), 59 regras determinísticas de detector de anti-patterns, orientação de UX e live browser iteration. Útil para auditar e melhorar a LP. |
+| **DesignParser** | https://designparser.de | Cheatsheet de regras de design com regras atualizadas, ferramentas e correções para interfaces. Bom para consulta rápida de padrões de layout, tipografia e hierarquia visual. |
+
+---
+
 ## Navegação do Projeto
 
 | Arquivo | Descrição |
@@ -322,7 +352,20 @@ npx wrangler pages deploy ./dist --project-name=opp4system-lp
 - [ ] Adicionar gradientes mais vibrantes
 - [ ] Incluir vídeo de apresentação (futuro)
 
-### 4. Funcionalidades Adicionais
+### 4. Google Ads
+- [ ] Criar campanha de pesquisa (Marca + Serviços)
+- [ ] Definir palavras-chave e match types
+- [ ] Criar copy dos anúncios (RSA)
+- [ ] Configurar tracking de conversões
+- [ ] Definir orçamento e estratégia de lances
+- [ ] Configurar palavras-chave negativas
+- [ ] Criar relatório de performance
+
+> **Skill disponível:** `google-ads-campaign` em `~/.claude/skills/google-ads-campaign/SKILL.md`
+> 
+> Para usar: *"Vamos criar uma campanha Google Ads para a Opp4System"*
+
+### 5. Funcionalidades Adicionais
 - [ ] Integrar com CRM (envio automático de leads)
 - [ ] Adicionar chat widget (WhatsApp ou chat interno)
 - [ ] Criar versão em Português e Inglês
